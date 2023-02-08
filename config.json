@@ -1,37 +1,19 @@
 {
-    "threshold_list" : [40,45,48,50,52,53,55,58],
-
-    "train_set_qcv2" : "train_set_hostqcv2_final.tsv",
-    "q2_set_qcv2" : "q2_set_hostqcv2_final.tsv",
-    "ng_set_qcv2" : "ng_set_hostqcv2_final.tsv",
-    "train_set_cela" : "train_set_cela_final.tsv",
-    "q2_set_cela" : "q2_set_cela_final.tsv",
-    "ng_set_cela" : "ng_set_cela_final.tsv",
-    "nq1" : "nq1_set_hostqcv2_final",
-    "nq2" : "FY23Q2_host_scores.tsv",
-    "nq2_cela" : "FY23Q2_CELA.tsv",
-    "all_feat_set_all" : "AllRelevant174kHost_CELA4Months_TrafficSafety2Months_Features.tsv",
-
-    "train_set_newsauth_qcv2" : "train_set_hostqcv2_final_newsauth_labels.tsv",
-    "use_news_auth_labels" : false,
-
-    "train_set_ng_gdi_qcv2" : "train_set_hostqcv2_final_ng_gdi_labels.tsv",
-    "use_ng_gdi_labels" : true,
-
-    "regression" : false,
-
-    "hostqcv2" : true,
-    "cela" : true,
-    "newsauth" : true,
-    "anytext" : false,
-    "isspam" : true,
-
-    "sample" : 30000,
-    "test_ratio" : 0.02,
-    "unsat_threshold_train" : 50,
-
-    "fit" :true,
-
-    "log_output_file" : "expt_F5_cela_newsauth_spam_only_From_CUV_without_textbased_F2+spam+qcv2_ng_gdi1.txt",
-    "model_save_path" : "expt_F5_cela_newsauth_spam_only_From_CUV_without_textbased_F2+spam+qcv2_newsauth_ng_gdi1.pkl"
-}
+    "latent_dims" : 8,
+	"capacity"  : 8,
+	"use_gpu" : true,
+	"train_batch_size" : 8,
+	"test_batch_size" : 500,
+	"lr" : 0.001,
+	"weight_decay" : 0.00001,
+	"train" : false,
+	
+	"train_path" : "/dataset/kle4225_lhs512.hdf5",
+	"test_path" : "/dataset/kle4225_mc500.hdf5",
+	
+	"kle" : 4225,
+	"datapoints" : 512,
+    "log_output_file" : "kle4225_512_gln.txt",
+    "model_save_path" : "kle4225_512_gln.pth",
+	"model_load_path" : "kle4225_512_gln.pth"
+ }
